@@ -1,0 +1,60 @@
+<Schema name="classic_cars_cube">
+  <Cube name="CarsCube" visible="true" cache="true" enabled="true">
+    <Table name="fact_sales">
+    </Table>
+    <Dimension type="TimeDimension" visible="true" foreignKey="idDate" highCardinality="false" name="Date">
+      <Hierarchy visible="true" hasAll="true" primaryKey="idDate">
+        <Table name="dim_dates">
+        </Table>
+        <Level name="Year" visible="true" table="dim_dates" column="year" type="Integer" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="Month" visible="true" table="dim_dates" column="month" type="Integer" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+        <Level name="Day" visible="true" table="dim_dates" column="day" type="Integer" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="idLocation" highCardinality="false" name="Location">
+      <Hierarchy visible="true" hasAll="true" primaryKey="idLocation">
+        <Table name="dim_locations">
+        </Table>
+        <Level name="Country" visible="true" table="dim_locations" column="country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="IfBlankName">
+        </Level>
+        <Level name="State" visible="true" table="dim_locations" column="state" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="IfBlankName">
+        </Level>
+        <Level name="City" visible="true" table="dim_locations" column="city" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="idSeller" highCardinality="false" name="Seller">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="dim_sellers">
+        </Table>
+        <Level name="Seller" visible="true" column="idSeller" nameColumn="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="idProduct" highCardinality="false" name="Product">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="dim_products">
+        </Table>
+        <Level name="Product" visible="true" column="idProduct" nameColumn="productName" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="idCustomer" highCardinality="false" name="Customer">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="dim_customers">
+        </Table>
+        <Level name="Customer" visible="true" column="idCustomer" nameColumn="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Order Number" column="orderId" datatype="Integer" aggregator="count" visible="true">
+    </Measure>
+    <Measure name="Quantity" column="quantityOrdered" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Total Gain" column="globalPrice" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
