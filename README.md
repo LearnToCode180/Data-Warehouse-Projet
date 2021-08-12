@@ -41,3 +41,10 @@ La table de faits contiendra en plus **des clés étrangères non significatives
 
 # Extraits du travail réalisé
 ## Quelques Diagrammes obtenus par Power BI
+Gain total par ville et par annee :
+
+![Gain total par ville et par annee](Images/GainTotalParVille.png)
+
+Quantite achete par annee :
+
+![QuantiteParAnnee](/Images/QuantiteParAnnee.png)
