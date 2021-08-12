@@ -37,4 +37,7 @@ La table de faits contiendra en plus **des clés étrangères non significatives
 + Talend Open Studio (TOS) : Data Integration
 + Power BI : Data Visualisation
 + Pentaho Schema Workbench : Création Cube OLAP
-+ TIBCO Jaspersoft Server : Generation du rapport a partir du Cube OLAP cree
++ TIBCO Jaspersoft Server : Génération du rapport à partir du Cube OLAP crée
+
+# Extraits du travail réalisé
+## Quelques Diagrammes obtenus par Power BI
