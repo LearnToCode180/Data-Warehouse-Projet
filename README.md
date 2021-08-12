@@ -40,7 +40,17 @@ La table de faits contiendra en plus **des clés étrangères non significatives
 + TIBCO Jaspersoft Server : Génération du rapport à partir du Cube OLAP crée
 
 # Extraits du travail réalisé
-## Quelques Diagrammes obtenus par Power BI
+
+## Alimentation des tables de dimensions et de la table de faits par TOS
++ Dimension **dates** :
+
+![datesALMT](/Images/datesALMT.png)
+
++ Table de faits **FactSales** :
+
+![fact_Sales](/Images/fact_sellers_ALMT.png)
+
+## Diagrammes obtenus par Power BI
 + Gain total par ville et par année :
 
 ![Gain total par ville et par annee](Images/GainTotalParVille.png)
@@ -52,3 +62,22 @@ La table de faits contiendra en plus **des clés étrangères non significatives
 + Quantités achetées de chaque produit par mois et par année :
 
 ![QuantitésAchetéesDeChaqueProduit](/Images/QuantitésAchetéesDeChaqueProduit.png)
+
+## Création du Cube OLAP par Pentaho Schema Workbench
++ Cube OLAP :
+
+![CubeOLAP](/Images/CubeOLAP.png)
+
++ La mesure OrderNumber :
+
+![MesureOrderNumber](/Images/MesureOrderNumber.png)
+
+# Rapport à partir du Cube OLAP par Jaspersoft Server
++ Rapport OLAP :
+
+![RapportOLAP](/Images/RapportOLAP.png)
+
++ Nombre d'ordres fait par le client **Online Diecast Creations Co**  du produit **1936 Mercedes Benz 500k Roadster** où le fournisseur est **Red Start Diecast**  dans **USA, NH, Nashua** à la date **06/01/2003** :
+
+![OrderNumberRapport](/Images/OrderNumberRapport.png)
+
