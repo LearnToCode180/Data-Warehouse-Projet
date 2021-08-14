@@ -1,5 +1,5 @@
 # Data-Warehouse-Projet
-Creation d'une base de données décisionnelles et son cube OLAP à partir d'une base de données commerciale.
+Création d'une base de données décisionnelles et son cube OLAP à partir d'une base de données commerciale.
 
 # Base de données choisie
 La base de données sur laquelle j’ai travaillé est **classicModelsBase** qui est un détaillant de modèles réduits de base de données de voitures classiques. Elle contient des données commerciales typiques telles que les clients, les produits, les commandes client, les lignes de commande client, etc. Et que j’ai trouvé dans un site qui fait des tutoriels sur MySQL.
